@@ -1,9 +1,9 @@
 {
-  "id": "/block",
+  "id": "/mainChainBlock",
   "type": "object",
 
   "properties": {
-    "index": {
+    "height": {
       "type": "integer",
       "minimum": 0,
       "description": "a numeric number representing block index, 0 is the genesis block"
