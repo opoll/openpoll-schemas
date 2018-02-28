@@ -39,8 +39,8 @@
       "type": "array",
       "description": "An array of responses to a poll question.",
       "items": {
-        "id": "/pollAnswer",
-        "type": "object"
+        "type": "string",
+        "maxLength": 2000
       }
     }
   },
