@@ -11,7 +11,8 @@
 
     "timestamp": {
       "type": "integer",
-      "description": "A UNIX timestamp representing when this block was mined."
+      "description": "A UNIX timestamp representing when this block was mined.",
+      "minimum": 1514764800
     },
 
     "prevHash": {

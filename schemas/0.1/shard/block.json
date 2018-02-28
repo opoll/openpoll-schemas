@@ -17,7 +17,8 @@
 
     "timestamp": {
       "type": "integer",
-      "description": "A UNIX timestamp representing when this block was mined."
+      "description": "A UNIX timestamp representing when this block was mined.",
+      "minimum": 1514764800
     },
 
     "prevHash": {
@@ -31,10 +32,10 @@
       "description": "An array of poll response objects that are locked in the block.",
       "items": {
         "id": "/poll/response",
-        "type": "object",
-        "minItems": 1,
-        "uniqueItems": true
-      }
+        "type": "object"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
 
     "minerAddress": {

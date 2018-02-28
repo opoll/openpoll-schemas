@@ -55,9 +55,9 @@
       "description": "An array of demographics belonging to the respondent",
       "items": {
         "id": "/poll/demographic",
-        "type": "object",
-        "uniqueItems": true
-      }
+        "type": "object"
+      },
+      "uniqueItems": true
     }
   },
 
