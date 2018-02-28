@@ -30,8 +30,10 @@
       "type": "array",
       "description": "An array of poll response objects that are locked in the block.",
       "items": {
-        "id": "/pollResponse",
-        "type": "object"
+        "id": "/poll/response",
+        "type": "object",
+        "minItems": 1,
+        "uniqueItems": true
       }
     },
 
