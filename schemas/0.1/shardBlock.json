@@ -1,0 +1,69 @@
+{
+  "id": "/shardBlock",
+  "type": "object",
+
+  "properties": {
+    "height": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The height of the block in the blockchain."
+    },
+
+    "pollId": {
+      "type": "string",
+      "description": "The id of the poll that this block belongs to.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "timestamp": {
+      "type": "integer",
+      "description": "The time at which this block was mined.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "rewardAddress": {
+      "type": "string",
+      "description": "The address to which the reward for this block will go to.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "nonce": {
+      "type": "integer",
+      "description": "An arbitrary number used for mining.",
+      "minimum": 0
+    },
+
+    "prevHash": {
+      "type": "string",
+      "description": "Hash of the block previous to this block.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "hash": {
+      "type": "string",
+      "description": "Hash of this block.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "responses": {
+      "type": "array",
+      "description": "An array of poll response objects that are locked in the block.",
+      "items": {
+        "id": "/pollResponse",
+        "type": "object"
+      }
+    }
+
+  },
+
+  "required": [
+    "height",
+    "pollId",
+    "timestamp",
+    "rewardAddress",
+    "nonce",
+    "prevHash",
+    "hash",
+    "responses"
+  ]
+}

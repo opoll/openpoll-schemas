@@ -1,0 +1,56 @@
+{
+  "id": "/pollResponse",
+  "type": "object",
+
+  "properties": {
+    "responseId": {
+      "type": "string",
+      "minimum": 0,
+      "description": "The id of this poll response.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "pollId": {
+      "type": "string",
+      "description": "The id of the poll to which this response belongs to.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "address": {
+      "type": "string",
+      "description": "The address of the respondent. Used for crediting respondents for confirmed responses.",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "timestamp": {
+      "type": "integer",
+      "description": "the hash of the previous block on the chain",
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "signature": {
+      "type": "string",
+      "description": "The signature of the respondent to signify that it is them who made this response.",
+      "minimum": 0,
+      "pattern": "^[0-9A-Fa-f]{128}$"
+    },
+
+    "responseData": {
+      "type": "array",
+      "description": "An array of responses to a poll question.",
+      "items": {
+        "id": "/pollAnswer",
+        "type": "object"
+      }
+    }
+  },
+
+  "required": [
+    "responseId",
+    "pollId",
+    "address",
+    "timestamp",
+    "signature",
+    "responseData"
+  ]
+}

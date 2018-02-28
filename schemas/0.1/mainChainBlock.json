@@ -1,44 +1,44 @@
 {
-  "id": "/block",
+  "id": "/mainChainBlock",
   "type": "object",
-  
+
   "properties": {
-    "index": {
+    "height": {
       "type": "integer",
       "minimum": 0,
       "description": "a numeric number representing block index, 0 is the genesis block"
     },
-    
+
     "author": {
       "type": "string",
       "description": "the public key of the person who authored this block",
       "pattern": "^[0-9A-Fa-f]{128}$"
     },
-    
+
     "difficulty": {
       "type": "string",
       "description": "the difficulty level used in computing this block",
       "pattern": "^[0-9A-Fa-f]{128}$"
     },
-    
+
     "prevBlockHash": {
       "type": "string",
       "description": "the hash of the previous block on the chain",
       "pattern": "^[0-9A-Fa-f]{128}$"
     },
-    
+
     "epoch": {
       "type": "integer",
       "description": "a UNIX timestamp of when this block was mined",
       "minimum": 0
     },
-    
+
     "hash": {
       "type": "string",
       "description": "a hash representing this block",
       "pattern": "^[0-9A-Fa-f]{128}$"
     },
-    
+
     "token_transactions": {
       "type": "array",
       "description": "an array of token transactions that occured in this block",
@@ -48,7 +48,7 @@
         "additionalProperties": {"$ref": "#"}
       }
     },
-    
+
     "concluded_ventures": {
       "type": "array",
       "description": "an array of all completed ventures that occured in this block",
@@ -59,7 +59,7 @@
       }
     }
   },
-  
+
   "required": [
     "index",
     "author",

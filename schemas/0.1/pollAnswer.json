@@ -1,0 +1,24 @@
+{
+  "id": "/pollAnswer",
+  "type": "object",
+
+  "properties": {
+    "question": {
+      "type": "string",
+      "minimum": 0,
+      "description": "A poll question that a user answers."
+    },
+
+    "answer": {
+      "type": "string",
+      "minimum": 0,
+      "description": "The answer the user provided to this poll question."
+    }
+
+ },
+
+  "required": [
+    "question",
+    "answer"
+  ]
+}
