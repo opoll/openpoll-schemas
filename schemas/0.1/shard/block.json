@@ -12,19 +12,19 @@
     "pollId": {
       "type": "string",
       "description": "The id of the poll that this block belongs to.",
-      "pattern": "^[0-9A-Fa-f]{128}$"
+      "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
     "timestamp": {
       "type": "integer",
       "description": "The time at which this block was mined.",
-      "pattern": "^[0-9A-Fa-f]{128}$"
+      "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
     "rewardAddress": {
       "type": "string",
       "description": "The address to which the reward for this block will go to.",
-      "pattern": "^[0-9A-Fa-f]{128}$"
+      "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
     "nonce": {
@@ -36,13 +36,13 @@
     "prevHash": {
       "type": "string",
       "description": "Hash of the block previous to this block.",
-      "pattern": "^[0-9A-Fa-f]{128}$"
+      "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
     "hash": {
       "type": "string",
       "description": "Hash of this block.",
-      "pattern": "^[0-9A-Fa-f]{128}$"
+      "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
     "responses": {
