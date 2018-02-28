@@ -1,5 +1,5 @@
 {
-  "id": "/shardBlock",
+  "id": "/shard/block",
   "type": "object",
 
   "properties": {

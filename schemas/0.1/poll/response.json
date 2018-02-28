@@ -1,5 +1,5 @@
 {
-  "id": "/pollResponse",
+  "id": "/poll/response",
   "type": "object",
 
   "properties": {
