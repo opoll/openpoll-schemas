@@ -17,7 +17,7 @@
 
     "peers": {
       "type": "array",
-      "description": "an array of peers that this shard is aware of",
+      "description": "an array of peers that this shard is aware of which are mining this shard",
       "items": {
         "type": "object",
         "id": "/shard/peer",
@@ -50,6 +50,7 @@
   },
 
   "required": [
+    "pollHash",
     "genesisBlockHash"
   ]
 }
