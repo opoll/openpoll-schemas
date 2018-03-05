@@ -21,6 +21,12 @@
       "minimum": 1514764800
     },
 
+    "nextHash": {
+      "type": "string",
+      "description": "in the event this block has a hash the the block preceding this one",
+      "pattern": "^[0-9A-Fa-f]{64}$"
+    },
+
     "prevHash": {
       "type": "string",
       "description": "Hash of the block which preceded this block.",
@@ -31,7 +37,7 @@
       "type": "array",
       "description": "An array of poll response objects that are locked in the block.",
       "items": {
-        "#ref": "https://schemas.openpoll.io/0.1/poll/response.json"
+        "$ref": "https://schemas.openpoll.io/0.1/poll/response.json"
       },
       "minItems": 1,
       "uniqueItems": true
