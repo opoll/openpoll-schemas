@@ -1,5 +1,5 @@
 {
-  "id": "/mainchain/block",
+  "id": "https://schemas.openpoll.io/0.1/mainchain/block.json",
   "type": "object",
 
   "properties": {
@@ -25,9 +25,7 @@
       "type": "array",
       "description": "an array of token transactions that occured in this block.",
       "items": {
-        "type": "object",
-        "id": "/token/transaction",
-        "additionalProperties": {"$ref": "#"}
+        "$ref": "https://schemas.openpoll.io/0.1/token/transaction.json"
       },
       "uniqueItems": true
     },

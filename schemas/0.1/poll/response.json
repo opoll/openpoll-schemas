@@ -1,5 +1,5 @@
 {
-  "id": "/poll/response",
+  "id": "https://schemas.openpoll.io/0.1/poll/response.json",
   "type": "object",
 
   "properties": {
@@ -54,8 +54,7 @@
       "type": "array",
       "description": "An array of demographics belonging to the respondent",
       "items": {
-        "id": "/poll/demographic",
-        "type": "object"
+        "$ref": "https://schemas.openpoll.io/0.1/poll/demographics.json"
       },
       "uniqueItems": true
     }

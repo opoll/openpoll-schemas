@@ -1,14 +1,14 @@
 {
-  "name": "openpoll-blockchain-lib",
-  "version": "1.0.0",
-  "description": "a library of functions for handling the openpoll blockchain'",
+  "name": "openpoll-schemas",
+  "version": "1.0.1",
+  "description": "A package containing all the JSON Schema definitions for OpenPoll",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opoll/openpoll-blockchain-lib.git"
+    "url": "git+https://github.com/opoll/openpoll-schemas.git"
   },
   "keywords": [
     "blockchain",
@@ -17,11 +17,10 @@
   "author": "OpenPoll Inc",
   "license": "SEE LICENSE IN LICENSE.TXT",
   "bugs": {
-    "url": "https://github.com/opoll/openpoll-blockchain-lib/issues"
+    "url": "https://github.com/opoll/openpoll-schemas/issues"
   },
-  "homepage": "https://github.com/opoll/openpoll-blockchain-lib#readme",
+  "homepage": "https://github.com/opoll/openpoll-schemas#readme",
   "dependencies": {
-    "json-schema-to-typescript": "^5.3.2",
     "jsonschema": "^1.2.2"
   }
 }

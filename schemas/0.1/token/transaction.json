@@ -1,5 +1,5 @@
 {
-  "id": "/token/transaction",
+  "id": "https://schemas.openpoll.io/0.1/token/transaction.json",
   "type": "object",
   
   "properties": {},
