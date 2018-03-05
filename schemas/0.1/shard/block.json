@@ -1,5 +1,5 @@
 {
-  "id": "/shard/block",
+  "id": "https://schemas.openpoll.io/shard/block.json",
   "type": "object",
 
   "properties": {
@@ -54,7 +54,7 @@
       "type": "string",
       "description": "Hash of this block",
       "pattern": "^[0-9A-Fa-f]{64}$"
-    },
+    }
 
   },
 

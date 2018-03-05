@@ -1,5 +1,5 @@
 {
-  "id": "/shard/shard",
+  "id": "https://schemas.openpoll.io/shard/shard.json",
   "type": "object",
 
   "properties": {

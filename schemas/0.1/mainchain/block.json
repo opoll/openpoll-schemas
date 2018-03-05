@@ -1,5 +1,5 @@
 {
-  "id": "/mainchain/block",
+  "id": "https://schemas.openpoll.io/mainchain/block.json",
   "type": "object",
 
   "properties": {

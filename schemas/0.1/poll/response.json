@@ -1,5 +1,5 @@
 {
-  "id": "/poll/response",
+  "id": "https://schemas.openpoll.io/poll/response.json",
   "type": "object",
 
   "properties": {
