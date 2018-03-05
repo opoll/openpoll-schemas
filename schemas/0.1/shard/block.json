@@ -1,5 +1,5 @@
 {
-  "id": "https://schemas.openpoll.io/shard/block.json",
+  "id": "https://schemas.openpoll.io/0.1/shard/block.json",
   "type": "object",
 
   "properties": {
@@ -31,7 +31,7 @@
       "type": "array",
       "description": "An array of poll response objects that are locked in the block.",
       "items": {
-        "#ref": "https://schemas.openpoll.io/poll/response.json"
+        "#ref": "https://schemas.openpoll.io/0.1/poll/response.json"
       },
       "minItems": 1,
       "uniqueItems": true

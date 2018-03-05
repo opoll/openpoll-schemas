@@ -1,5 +1,5 @@
 {
-  "id": "https://schemas.openpoll.io/shard/shard.json",
+  "id": "https://schemas.openpoll.io/0.1/shard/shard.json",
   "type": "object",
 
   "properties": {
@@ -19,7 +19,7 @@
       "type": "array",
       "description": "an array of peers that this shard is aware of",
       "items": {
-        "$ref": "https://schemas.openpoll.io/shard/peer.json"
+        "$ref": "https://schemas.openpoll.io/0.1/shard/peer.json"
       },
       "uniqueItems": true
     },

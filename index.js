@@ -26,7 +26,7 @@ const walk = async (directory) => {
 	return schemas;
 };
 
-walk(path.resolve(__dirname, "schemas")).then(schemas => {
+module.exports.loaded = walk(path.resolve(__dirname, "schemas")).then(schemas => {
 	module.exports.schemas = schemas;
 	module.exports.initialized = true;
 });

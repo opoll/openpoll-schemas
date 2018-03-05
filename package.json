@@ -1,6 +1,6 @@
 {
   "name": "openpoll-schemas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package containing all the JSON Schema definitions for OpenPoll",
   "main": "index.js",
   "scripts": {
