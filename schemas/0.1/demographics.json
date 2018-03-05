@@ -1,0 +1,115 @@
+{
+  "id": "https://schemas.openpoll.io/0.1/demographics.json",
+  "type": "object",
+
+  "properties": {
+    "ageRange": {
+      "type": "string",
+      "enum": [
+        "18 - 24",
+        "25 - 32",
+        "33 - 40",
+        "40 - 47",
+        "48 - 55",
+        "56 - 70",
+        "71+"
+      ]
+    },
+
+    "gender": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ]
+    },
+
+    "ethnicity": {
+      "type": "string",
+      "enum": [
+        "asian",
+        "african-american",
+        "caucasian",
+        "hispanic",
+        "native-american",
+        "pacific-islander",
+        "other"
+      ]
+    },
+
+    "personalIncome": {
+      "type": "string",
+      "enum": [
+        "0",
+        "u25000",
+        "25000-49999",
+        "50000-74999",
+        "75000-99999",
+        "100000-249999",
+        "250000-1000000",
+        "1000000+"
+      ]
+    },
+
+    "householdIncome": {
+      "type": "string",
+      "enum": [
+        "0",
+        "u25000",
+        "25000-49999",
+        "50000-74999",
+        "75000-99999",
+        "100000-249999",
+        "250000-1000000",
+        "1000000+"
+      ]
+    },
+
+    "education": {
+      "type": "string",
+      "enum": [
+        "middleschool",
+        "some_highschool",
+        "ged",
+        "highschool",
+        "trade",
+        "college",
+        "some_college",
+        "bachelor",
+        "masters",
+        "doctorate"
+      ]
+    },
+
+    "politicalParty": {
+      "type": "string",
+      "emum": [
+        "republican",
+        "democrat",
+        "independent",
+        "unaffiliated"
+      ]
+    },
+
+    "votingRegistration": {
+      "type": "string",
+      "enum": [
+        "registered",
+        "not_registered"
+      ]
+    },
+
+    "military": {
+      "type": "string",
+      "enum": [
+        "active",
+        "reserves",
+        "veteran",
+        "none"
+      ]
+    }
+  },
+
+  "required": []
+}
