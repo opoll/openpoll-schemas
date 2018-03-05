@@ -31,8 +31,7 @@
       "type": "array",
       "description": "An array of poll response objects that are locked in the block.",
       "items": {
-        "id": "/poll/response",
-        "type": "object"
+        "#ref": "https://schemas.openpoll.io/poll/response.json"
       },
       "minItems": 1,
       "uniqueItems": true
