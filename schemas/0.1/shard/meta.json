@@ -1,0 +1,42 @@
+{
+  "id": "https://schemas.openpoll.io/0.1/shard/meta.json",
+  "type": "object",
+
+  "properties": {
+    "pollHash": {
+      "type": "string",
+      "description": "the poll hash associated with this shard",
+      "pattern": "^[0-9A-Fa-f]{64}$"
+    },
+
+    "genesisBlockHash": {
+      "type": "string",
+      "pattern": "^[0-9A-Fa-f]{64}$",
+      "description": "a hash of the genesis block for this shard."
+    },
+
+    "numMiners": {
+      "type": "integer",
+      "description": "the known number of miners associated with this shard",
+      "minimum": 0
+    },
+
+    "difficulty": {
+      "type": "string",
+      "description": "the difficulty associated with this shard"
+    },
+
+    "pollName": {
+      "type": "string",
+      "description": "the name of the poll associated with this poll"
+    }
+  },
+
+  "required": [
+    "pollHash",
+    "genesisBlockHash",
+    "numMiners",
+    "difficulty",
+    "name"
+  ]
+}
