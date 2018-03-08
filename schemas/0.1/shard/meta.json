@@ -12,7 +12,13 @@
     "genesisBlockHash": {
       "type": "string",
       "pattern": "^[0-9A-Fa-f]{64}$",
-      "description": "a hash of the genesis block for this shard."
+      "description": "a hash of the genesis block for this shard"
+    },
+
+    "lastBlockHash": {
+      "type": "string",
+      "pattern": "^[0-9A-Fa-f]{64}$",
+      "description": "the hash of the last known block on this chain"
     },
 
     "numMiners": {
