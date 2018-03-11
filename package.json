@@ -1,5 +1,5 @@
 {
-  "name": "openpoll-schemas",
+  "name": "@openpoll/schemas",
   "version": "1.0.2",
   "description": "A package containing all the JSON Schema definitions for OpenPoll",
   "main": "index.js",
