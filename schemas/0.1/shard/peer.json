@@ -6,7 +6,7 @@
     "publicKey": {
       "type": "string",
       "description": "the public key associated with this peer",
-      "pattern": "^[0-9A-Fa-f]{64}$"
+      "pattern": "^\\s*-----BEGIN PUBLIC KEY-----\\s*(?=(([A-Za-z0-9+/=]+\\s*)+))\\1-----END PUBLIC KEY-----\\s*$"
     },
 
     "lastInteraction": {
