@@ -6,8 +6,6 @@ interface NestedSchemas {
 
 interface OpenPollSchemas {
 	validator: jsonschema.Validator;
-	initialized: boolean;
-	walk: Promise<NestedSchemas>;
 	schemas: NestedSchemas;
 }
 
