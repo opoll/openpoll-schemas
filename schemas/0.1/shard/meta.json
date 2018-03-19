@@ -40,7 +40,6 @@
 
   "required": [
     "pollHash",
-    "genesisBlockHash",
     "numMiners",
     "difficulty",
     "name"

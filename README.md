@@ -21,18 +21,6 @@ let data = {
 console.log(validator.validate(data, schemas["0.1"].mainchain.block));
 ```
 
-Keep in mind that the schemas are loaded asynchronously so it might take a bit of time to get them to load. You can
-check if it's done by attaching a `.then()` method to the exported member `loaded` as shown below:
-
-```javascript
-const openpoll = require("openpoll-schemas");
-
-openpoll.loaded.then(() => {
-    console.log("Loaded all schemas");
-    // Do synchronous logic here
-});
-```
-
 # Additional information
 
 All schemas in this package can also be found on https://schemas.openpoll.io. The ID of a schema should resolve to a

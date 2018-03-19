@@ -1,12 +1,12 @@
 {
-  "id": "https://schemas.openpoll.io/0.1/shard/peer",
+  "id": "https://schemas.openpoll.io/0.1/shard/peer.json",
   "type": "object",
 
   "properties": {
     "publicKey": {
       "type": "string",
       "description": "the public key associated with this peer",
-      "pattern": "^[0-9A-Fa-f]{64}$"
+      "pattern": "^(-----BEGIN PUBLIC KEY-----\\r?\\n[\\/+=a-zA-Z0-9\\r\\n]*\\r?\\n-----END PUBLIC KEY-----\\r?\\n?)$"
     },
 
     "lastInteraction": {

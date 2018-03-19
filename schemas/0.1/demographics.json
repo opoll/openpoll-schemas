@@ -4,110 +4,146 @@
 
   "properties": {
     "ageRange": {
-      "type": "string",
-      "enum": [
-        "18 - 24",
-        "25 - 32",
-        "33 - 40",
-        "40 - 47",
-        "48 - 55",
-        "56 - 70",
-        "71+"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "18 - 24",
+          "25 - 32",
+          "33 - 40",
+          "40 - 47",
+          "48 - 55",
+          "56 - 70",
+          "71+"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "gender": {
-      "type": "string",
-      "enum": [
-        "male",
-        "female",
-        "other"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "male",
+          "female",
+          "other"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "ethnicity": {
-      "type": "string",
-      "enum": [
-        "asian",
-        "african-american",
-        "caucasian",
-        "hispanic",
-        "native-american",
-        "pacific-islander",
-        "other"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "asian",
+          "african-american",
+          "caucasian",
+          "hispanic",
+          "native-american",
+          "pacific-islander",
+          "other"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "personalIncome": {
-      "type": "string",
-      "enum": [
-        "0",
-        "u25000",
-        "25000-49999",
-        "50000-74999",
-        "75000-99999",
-        "100000-249999",
-        "250000-1000000",
-        "1000000+"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "0",
+          "u25000",
+          "25000-49999",
+          "50000-74999",
+          "75000-99999",
+          "100000-249999",
+          "250000-1000000",
+          "1000000+"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "householdIncome": {
-      "type": "string",
-      "enum": [
-        "0",
-        "u25000",
-        "25000-49999",
-        "50000-74999",
-        "75000-99999",
-        "100000-249999",
-        "250000-1000000",
-        "1000000+"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "0",
+          "u25000",
+          "25000-49999",
+          "50000-74999",
+          "75000-99999",
+          "100000-249999",
+          "250000-1000000",
+          "1000000+"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "education": {
-      "type": "string",
-      "enum": [
-        "middleschool",
-        "some_highschool",
-        "ged",
-        "highschool",
-        "trade",
-        "college",
-        "some_college",
-        "bachelor",
-        "masters",
-        "doctorate"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "middleschool",
+          "some_highschool",
+          "ged",
+          "highschool",
+          "trade",
+          "college",
+          "some_college",
+          "bachelor",
+          "masters",
+          "doctorate"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "politicalParty": {
-      "type": "string",
-      "emum": [
-        "republican",
-        "democrat",
-        "independent",
-        "unaffiliated"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "emum": [
+          "republican",
+          "democrat",
+          "independent",
+          "unaffiliated"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "votingRegistration": {
-      "type": "string",
-      "enum": [
-        "registered",
-        "not_registered"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "registered",
+          "not_registered"
+        ]
+      }, {
+        "type": "null"
+      }]
     },
 
     "military": {
-      "type": "string",
-      "enum": [
-        "active",
-        "reserves",
-        "veteran",
-        "none"
-      ]
+      "anyOf": [{
+        "type": "string",
+        "enum": [
+          "active",
+          "reserves",
+          "veteran",
+          "none"
+        ]
+      }, {
+        "type": "null"
+      }]
     }
   },
 
