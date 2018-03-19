@@ -23,3 +23,13 @@ const walk = (directory) => {
 };
 
 module.exports.schemas = walk(path.resolve(__dirname, "schemas"));
+
+// Remove references that have been resolved now
+const unresolvedRefs = validator.unresolvedRefs;
+
+unresolvedRefs.forEach((id) => {
+	if (validator.schemas[id]) {
+		let index = validator.unresolvedRefs.indexOf(id);
+		validator.unresolvedRefs.splice(index);
+	}
+});
