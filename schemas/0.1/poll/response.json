@@ -61,7 +61,7 @@
   },
 
   "required": [
-    "responseHash",
+    "hash",
     "pollHash",
     "timestamp",
     "respondentAddr",
