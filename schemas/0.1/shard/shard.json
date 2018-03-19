@@ -9,12 +9,6 @@
       "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
-    "genesisBlockHash": {
-      "type": "string",
-      "pattern": "^[0-9A-Fa-f]{64}$",
-      "description": "a hash of the genesis block for this shard."
-    },
-
     "peers": {
       "type": "array",
       "description": "an array of peers that this shard is aware of which are mining this shard",

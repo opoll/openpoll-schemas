@@ -9,10 +9,10 @@
       "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
-    "genesisBlockHash": {
+    "lastBlockHash": {
       "type": "string",
       "pattern": "^[0-9A-Fa-f]{64}$",
-      "description": "a hash of the genesis block for this shard."
+      "description": "the hash of the last known block on this chain"
     },
 
     "numMiners": {
