@@ -9,12 +9,6 @@
       "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
-    "genesisBlockHash": {
-      "type": "string",
-      "pattern": "^[0-9A-Fa-f]{64}$",
-      "description": "a hash of the genesis block for this shard"
-    },
-
     "lastBlockHash": {
       "type": "string",
       "pattern": "^[0-9A-Fa-f]{64}$",
