@@ -1,5 +1,6 @@
 {
-  "id": "https://schemas.openpoll.io/0.1/poll/poll.json",
+  "$id": "https://schemas.openpoll.io/0.1/poll/poll.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
 
   "properties": {
@@ -27,7 +28,7 @@
       "minimum": 0
     },
 
-    "maxRespondents": {
+    "maxResponses": {
       "type": "integer",
       "description": "the maximum number of respondents under this poll",
       "minimum": 10,
@@ -58,7 +59,7 @@
     "hash",
     "timestamp",
     "expiry",
-    "maxRespondents",
+    "maxResponses",
     "questions",
     "imageId"
   ]

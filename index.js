@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
-const validator = new (require("jsonschema").Validator);
+const Ajv = require("ajv");
+const ajv = new Ajv();
 
-module.exports.validator = validator;
+module.exports.validator = ajv;
+module.exports.schemasFlat = {};
 
 const walk = (directory) => {
 	let schemas = {};
@@ -15,7 +17,8 @@ const walk = (directory) => {
 		} else if (path.extname(file) == ".json") {
 			let schema = require(absolutePath);
 			schemas[path.basename(file, ".json")] = schema;
-			validator.addSchema(schema);
+			module.exports.schemasFlat[schema["$id"]] = schema;
+			ajv.addSchema(schema);
 		}
 	};
 
@@ -24,7 +27,10 @@ const walk = (directory) => {
 
 module.exports.schemas = walk(path.resolve(__dirname, "schemas"));
 
+console.log(ajv);
+
 // Remove references that have been resolved now
+/*
 const unresolvedRefs = validator.unresolvedRefs;
 
 unresolvedRefs.forEach((id) => {
@@ -33,3 +39,4 @@ unresolvedRefs.forEach((id) => {
 		validator.unresolvedRefs.splice(index);
 	}
 });
+*/

@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/opoll/openpoll-schemas#readme",
   "dependencies": {
-    "jsonschema": "^1.2.2"
+    "ajv": "^6.3.0"
   }
 }

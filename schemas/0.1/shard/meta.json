@@ -1,5 +1,6 @@
 {
-  "id": "https://schemas.openpoll.io/0.1/shard/meta.json",
+  "$id": "https://schemas.openpoll.io/0.1/shard/meta.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
 
   "properties": {
@@ -36,6 +37,6 @@
     "pollHash",
     "numMiners",
     "difficulty",
-    "name"
+    "pollName"
   ]
 }
