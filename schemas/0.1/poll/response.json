@@ -25,13 +25,13 @@
     "respondentAddress": {
       "type": "string",
       "description": "the address of the respondent",
-      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+      "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
     },
 
     "rewardAddress": {
       "type": "string",
       "description": "the address which rewards should be credited to, used for credit relaying",
-      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+      "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
     },
 
     "signature": {

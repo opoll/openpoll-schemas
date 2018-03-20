@@ -47,7 +47,7 @@
     "minerAddress": {
       "type": "string",
       "description": "The address of the person who mined this block.",
-      "pattern": "^[0-9A-Fa-f]{64}$"
+      "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
     },
 
     "nonce": {
