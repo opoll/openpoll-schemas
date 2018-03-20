@@ -4,6 +4,9 @@ const Ajv = require("ajv");
 const ajv = new Ajv();
 
 module.exports.validator = ajv;
+module.exports.validate = (schema, data) => {
+	return ajv.validate(schema, data);
+}
 module.exports.schemasFlat = {};
 
 const walk = (directory) => {

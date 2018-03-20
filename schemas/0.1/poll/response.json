@@ -25,13 +25,13 @@
     "respondentAddress": {
       "type": "string",
       "description": "the address of the respondent",
-      "pattern": "^[0-9A-Fa-f]{64}$"
+      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
     },
 
     "rewardAddress": {
       "type": "string",
       "description": "the address which rewards should be credited to, used for credit relaying",
-      "pattern": "^[0-9A-Fa-f]{64}$"
+      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
     },
 
     "signature": {
@@ -52,12 +52,7 @@
     },
 
     "respondentDemographics": {
-      "type": "array",
-      "description": "an array of demographics belonging to the respondent",
-      "items": {
-        "$ref": "https://schemas.openpoll.io/0.1/poll/demographics.json"
-      },
-      "uniqueItems": true
+      "$ref": "https://schemas.openpoll.io/0.1/demographics.json"
     }
   },
 

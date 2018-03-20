@@ -6,6 +6,7 @@ interface NestedSchemas {
 
 interface OpenPollSchemas {
 	validator: ajv.Ajv;
+	validate: (schema: any, data: any) => boolean;
 	schemas: NestedSchemas;
 	schemasFlat: {
 		[key: string]: any
