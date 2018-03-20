@@ -1,12 +1,15 @@
-import jsonschema = require("jsonschema");
+import ajv = require("ajv");
 
 interface NestedSchemas {
 	[key: string]: NestedSchemas;
 }
 
 interface OpenPollSchemas {
-	validator: jsonschema.Validator;
+	validator: ajv.Ajv;
 	schemas: NestedSchemas;
+	schemasFlat: {
+		[key: string]: any
+	};
 }
 
 declare var _: OpenPollSchemas;
