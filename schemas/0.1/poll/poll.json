@@ -52,6 +52,225 @@
       "description": "a preselected image identifier to represent this poll",
       "min": 1,
       "max": 5
+    },
+
+    "criteria": {
+      "type": "object",
+      "properties": {
+        "ageRange": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/ageRange" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/ageRange" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "gender": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/gender" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/gender" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "ethnicity": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/ethnicity" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/ethnicity" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "personalIncome": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/personalIncome" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/personalIncome" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "householdIncome": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/householdIncome" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/householdIncome" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "education": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/education" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/education" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "politicalParty": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/politicalParty" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/politicalParty" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "votingRegistration": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/votingRegistration" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/votingRegistration" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "military": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/military" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/military" }, 
+                  { "not": { "type": "null" } }
+                ]
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "zipcode": {
+          "anyOf": [
+            {
+              "allOf": [
+                { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/zipcode" }, 
+                { "not": { "type": "null" } }
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [{
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": {
+                    "allOf": [
+                      { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/zipcode" }, 
+                      { "not": { "type": "null" } }
+                    ]
+                  },
+                  "uniqueItems": true
+                }, {
+                  "allOf": [
+                    { "$ref": "https://schemas.openpoll.io/0.1/demographics.json#/properties/zipcode" }, 
+                    { "not": { "type": "null" } }
+                  ]
+                }]
+              },
+              "uniqueItems": true
+            }
+          ]
+        }
+      }
     }
   },
 
