@@ -3,6 +3,25 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
 
+  "definitions": {
+    "questionLabel": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255,
+      "description": "the question the respondent should answer to"
+    },
+    "questionOptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "uniqueItems": true,
+      "minLength": 2
+    }
+  },
+
   "properties": {
     "hash": {
       "type": "string",
@@ -37,13 +56,72 @@
 
     "questions": {
       "type": "array",
-      "description": "a list of strings representing questions in this poll",
+      "description": "an array of questions in this poll",
       "minItems": 1,
       "maxItems": 50,
       "items": {
-        "type": "string",
-        "minLength": 5,
-        "maxLength": 150
+        "anyOf": [{
+          "type": "object",
+          "description": "a question with a boolean value",
+          "properties": {
+            "questionType": {
+              "type": "string",
+              "const": "boolean"
+            },
+            "label": {
+              "$ref": "#/definitions/questionLabel"
+            }
+          }
+        }, {
+          "type": "object",
+          "description": "a question with 1 valid answer",
+          "properties": {
+            "questionType": {
+              "type": "string",
+              "const": "selectOne"
+            },
+            "label": {
+              "$ref": "#/definitions/questionLabel"
+            },
+            "options": {
+              "$ref": "#/definitions/questionOptions"
+            }
+          }
+        }, {
+          "type": "object",
+          "description": "a question with none or multiple selected",
+          "properties": {
+            "questionType": {
+              "type": "string",
+              "const": "selectAny"
+            },
+            "label": {
+              "$ref": "#/definitions/questionLabel"
+            },
+            "options": {
+              "$ref": "#/definitions/questionOptions"
+            }
+          }
+        }, {
+          "type": "object",
+          "description": "a question with none up to n selected answers",
+          "properties": {
+            "questionType": {
+              "type": "string",
+              "const": "selectMax"
+            },
+            "label": {
+              "$ref": "#/definitions/questionLabel"
+            },
+            "options": {
+              "$ref": "#/definitions/questionOptions"
+            },
+            "maxSelected": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }]
       }
     },
 
