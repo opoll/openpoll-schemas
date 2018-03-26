@@ -42,12 +42,22 @@
       "pattern": "^[0-9A-Fa-f]{1024}$"
     },
 
-    "responseData": {
+    "answers": {
       "type": "array",
       "description": "an array of responses made to this poll",
       "items": {
-        "type": "string",
-        "maxLength": 2000
+        "anyOf": [{
+          "type": "boolean"
+        }, {
+          "type": "string"
+        }, {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }]
       }
     },
 
@@ -63,7 +73,7 @@
     "respondentAddress",
     "rewardAddress",
     "signature",
-    "responseData",
+    "answers",
     "respondentDemographics"
   ]
 }

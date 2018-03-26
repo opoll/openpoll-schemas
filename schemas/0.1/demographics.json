@@ -145,6 +145,16 @@
       }, {
         "type": "null"
       }]
+    },
+
+    "zipcode": {
+      "anyOf": [{
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 99999
+      }, {
+        "type": "null"
+      }]
     }
   },
 
