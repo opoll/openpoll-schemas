@@ -40,6 +40,12 @@
       "pattern": "^[0-9A-Fa-f]{64}$"
     },
 
+    "title": {
+      "type": "string",
+      "description": "the poll's title or subject",
+      "minLength": 6
+    },
+
     "timestamp": {
       "type": "integer",
       "description": "a UNIX timestamp representing when this poll was created",
