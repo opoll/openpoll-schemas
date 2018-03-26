@@ -13,9 +13,20 @@
     "questionOptions": {
       "type": "array",
       "items": {
-        "type": "string",
-        "minLength": 1,
-        "maxLength": 255
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "a key that makes processing the poll easier",
+            "minLength": 1
+          },
+          "value": {
+            "type": "string",
+            "description": "a value that contains the string shown to respondent",
+            "minLength": 1,
+            "maxLength": 255
+          }
+        }
       },
       "uniqueItems": true,
       "minLength": 2
@@ -71,7 +82,11 @@
             "label": {
               "$ref": "#/definitions/questionLabel"
             }
-          }
+          },
+          "required": [
+            "questionType",
+            "label"
+          ]
         }, {
           "type": "object",
           "description": "a question with 1 valid answer",
@@ -86,7 +101,12 @@
             "options": {
               "$ref": "#/definitions/questionOptions"
             }
-          }
+          },
+          "required": [
+            "questionType",
+            "label",
+            "options"
+          ]
         }, {
           "type": "object",
           "description": "a question with none or multiple selected",
@@ -101,7 +121,12 @@
             "options": {
               "$ref": "#/definitions/questionOptions"
             }
-          }
+          },
+          "required": [
+            "questionType",
+            "label",
+            "options"
+          ]
         }, {
           "type": "object",
           "description": "a question with none up to n selected answers",
@@ -120,7 +145,13 @@
               "type": "integer",
               "minimum": 1
             }
-          }
+          },
+          "required": [
+            "questionType",
+            "label",
+            "options",
+            "maxSelected"
+          ]
         }]
       }
     },
