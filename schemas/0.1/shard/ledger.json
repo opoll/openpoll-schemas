@@ -1,0 +1,48 @@
+{
+  "$id": "https://schemas.openpoll.io/0.1/shard/ledger.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+
+  "properties": {
+    "blockId": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "the block this ledger is associated with"
+    },
+
+    "blockHash": {
+      "type": "string",
+      "description": "the hash of the block this ledger is associated with",
+      "pattern": "^[0-9A-Fa-f]{64}$"
+    },
+
+    "pollHash": {
+      "type": "string",
+      "description": "the hash of the poll this ledger consists of",
+      "pattern": "^[0-9A-Fa-f]{64}$"
+    },
+
+    "size": {
+      "type": "integer",
+      "description": "the number of entries contained in this ledger",
+      "minimum": 0
+    },
+
+    "entries": {
+      "type": "object",
+      "description": "maps respondent addresses to responses",
+      "patternProperties": {
+        "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$": { "$ref": "https://schemas.openpoll.io/0.1/poll/response.json" }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "required": [
+    "blockId",
+    "blockHash",
+    "pollHash",
+    "size",
+    "entries"
+  ]
+}
