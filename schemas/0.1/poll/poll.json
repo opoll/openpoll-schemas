@@ -71,6 +71,17 @@
       "maximum": 50000
     },
 
+    "tags": {
+      "type": "array",
+      "description": "an array of tags that describe the poll",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-zA-Z][a-zA-Z ]{1,18}[a-zA-Z]$"
+      },
+      "minItems": 0,
+      "maxItems": 6
+    },
+
     "questions": {
       "type": "array",
       "description": "an array of questions in this poll",
