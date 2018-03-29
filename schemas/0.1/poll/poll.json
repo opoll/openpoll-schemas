@@ -78,6 +78,7 @@
         "type": "string",
         "pattern": "^[a-zA-Z][a-zA-Z ]{1,18}[a-zA-Z]$"
       },
+      "uniqueItems": true,
       "minItems": 0,
       "maxItems": 6
     },
