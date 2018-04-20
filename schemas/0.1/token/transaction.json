@@ -2,8 +2,46 @@
   "$id": "https://schemas.openpoll.io/0.1/token/transaction.json",
   "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
-  
-  "properties": {},
-  
-  "required": []
+
+  "properties": {
+    "senderAddress": {
+      "type": "string",
+      "description": "the address of the spender",
+      "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
+    },
+
+    "receiverAddress": {
+      "type": "string",
+      "description": "the address of the receiver",
+      "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
+    },
+
+    "timestamp": {
+      "type": "integer",
+      "description": "a timestamp representing when this transaction was created",
+      "minimum": 1514764800
+    },
+
+    "signature": {
+      "type": "string",
+      "description": "the ECDSA signature of the sender to signify that it is them who made this transaction (512B)",
+      "minLength": 1024,
+      "maxLength": 1024,
+      "pattern": "^[0-9A-Fa-f]{1024}$"
+    },
+
+    "amount": {
+      "type": "integer",
+      "description": "the amount of POL token satoshis being transferred",
+      "minimum": 0
+    }
+  },
+
+  "required": [
+    "senderAddress",
+    "receiverAddress",
+    "timestamp",
+    "signature",
+    "amount"
+  ]
 }
