@@ -1,11 +1,12 @@
 {
   "name": "@openpoll/schemas",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A package containing all the JSON Schema definitions for OpenPoll",
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
