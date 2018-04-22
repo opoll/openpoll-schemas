@@ -1,0 +1,40 @@
+{
+  "$id": "https://schemas.openpoll.io/0.1/token/utxo_change_digest.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+
+  "properties": {
+    "blockId": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "the block id of the block this UTXO Change Digest is used to "
+    },
+
+    "blockHash": {
+      "type": "string",
+      "description": "Hash of the block which preceded this block.",
+      "pattern": "^[0-9A-Fa-f]{64}$"
+    },
+
+    "balances": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "the updated address",
+          "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  },
+
+  "required": [
+    "blockId",
+    "blockHash",
+    "balances"
+  ]
+}
