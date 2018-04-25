@@ -33,10 +33,9 @@
 
     "shards": {
       "type": "array",
-      "description": "an array SHA-256 hashes for completed shards included into this block.",
+      "description": "an array of completed shard objects",
       "items": {
-        "type": "string",
-        "pattern": "^[0-9A-Fa-f]{64}$"
+        "$ref": "https://schemas.openpoll.io/0.1/shard/completed.json"
       },
       "uniqueItems": true
     },
