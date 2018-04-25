@@ -1,0 +1,60 @@
+{
+  "$id": "https://schemas.openpoll.io/0.1/shard/completed.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+
+  "properties": {
+    "pollHash": {
+      "type": "string",
+      "description": "the hash of the poll this shard represents",
+      "pattern": "^[0-9A-Fa-f]{64}$"
+    },
+
+    "totalFunding": {
+      "type": "number",
+      "multipleOf": 1.0,
+      "description": "the total funding associated with this shard in POLU"
+    },
+
+    "responseRewardAddresses": {
+      "type": "object",
+      "description": "map from reward addresses to total reward amount",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "the reward address of the respondent",
+          "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
+        },
+        "value": {
+          "type": "number",
+          "multipleOf": 1.0,
+          "description": "the amount of POLU transferred to this response reward address"
+        }
+      }
+    },
+    
+    "minerRewardAddresses": {
+      "type": "object",
+      "description": "map from miner addresses to total reward amount",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "the reward address of the miner",
+          "pattern": "^OPEN[1-9A-Za-z][^OIl]{20,40}POLL$"
+        },
+        "value": {
+          "type": "number",
+          "multipleOf": 1.0,
+          "description": "the amount of POLU transferred to this miner for their work"
+        }
+      }
+    }
+  },
+
+  "required": [
+    "pollHash",
+    "totalFunding",
+    "responseRewardAddresses",
+    "minerRewardAddresses"
+  ]
+}
